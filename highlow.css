@@ -1,0 +1,13 @@
+body {
+ background: url(background.jpeg) no-repeat center center fixed;
+ background-size: cover;
+}
+
+#container {
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.panel {
+  border-radius: 20px;
+}

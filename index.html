@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>High Low</title>
+    <link rel="stylesheet" href="highlow.css">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div class="panel">
+        <h1>I have a random number between 1 and 100</h1>
+        <h3>Dare to guess?</h3>
+        <hr>
+        <p>Select difficulty setting</p>
+        <button>Super Easy (20 attempt)</button>
+        <button>Easy (10 attempts)</button>
+        <button>Hard (5 attempts)</button>
+        <button>Expert (2 attempts)</button>
+      </div>
+      <div class="panel">
+        <h3 id="results">Enter your guess below and press Enter</h3>
+        <input type="number" min="1" max="100">
+        <p>Number of previous attempts:</p>
+        <span id="attempts"></span>
+      </div>
+      <div class="panel">
+        <p>Your previous guesses:</p>
+        <span id="guesses"></span>
+      </div>
+      <script src="highlow.js"></script>
+    </div>
+
+  </body>
+
+</html>

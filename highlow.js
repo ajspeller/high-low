@@ -1,10 +1,22 @@
 var randomNumber;
+var guesses = [];
 var newGame = () => {
   window.location.reload();
 };
 
 var logGuess = (guess) => {
-  document.querySelector("#guessLog").innerHTML += `${guess}, `;
+  guestList = "";
+  const COMMA = ",";
+  guesses.push(guess);
+  guesses.forEach((v, i) => {
+    if ( i === 0) {
+      guestList += v;
+    } else {
+      guestList += `${COMMA} ${v}`;
+    }
+  });
+  document.querySelector("#guessLog").innerHTML = guestList;
+  document.querySelector("#attempts").innerHTML = guesses.length;
 };
 
 var compareGuess = () => {

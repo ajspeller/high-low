@@ -30,6 +30,7 @@ button {
   margin-bottom: 1.5em;
   width: 80%;
   font-size: .7em;
+  outline: none;
 }
 
 input {
@@ -37,4 +38,7 @@ input {
   height: 4em;
   text-align: center;
   width: 80%;
+}
+.activeButton {
+  background: green;
 }

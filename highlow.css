@@ -1,13 +1,40 @@
 body {
- background: url(background.jpeg) no-repeat center center fixed;
- background-size: cover;
+  background: url('background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-size: 1.2em;
 }
 
 #container {
+  background: linear-gradient(0deg, black, yellow, black);
   border-radius: 25px;
   margin: 0 auto;
+  max-width: 80%;
+  opacity: 0.90;
+  padding: 10px;
+  text-align: center;
 }
 
 .panel {
+  background-color: #eee;
   border-radius: 20px;
+  margin: 20px auto;
+  max-width: 80%;
+  padding: 10px;
+}
+
+button {
+  background-color: #eee;
+  border-radius: 20px;
+  border: 2px dotted black;
+  height: 3em;
+  margin-bottom: 1.5em;
+  width: 80%;
+  font-size: .7em;
+}
+
+input {
+  border-radius: 20px;
+  height: 4em;
+  text-align: center;
+  width: 80%;
 }

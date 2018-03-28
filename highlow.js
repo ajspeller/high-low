@@ -2,6 +2,13 @@ var randomNumber;
 var guesses = [];
 var maxGuesses = 10;
 
+var gameEnded = () => {
+  document.querySelector("#newGameBtn").style.display = 'inline';
+  document.querySelector("#easyBtn").style.display  = "none";
+  document.querySelector("#hardBtn").style.display  = "none";
+  document.querySelector("input").setAttribute("readonly","readonly");
+}
+
 var newGame = () => {
   window.location.reload();
 };
@@ -44,15 +51,19 @@ var compareGuess = () => {
       document.querySelector("#results").innerHTML = "Your guess was too low!";
     } else {
       document.querySelector("#results").innerHTML = "Your guess was correct!";
+      gameEnded();
     }
     logGuess(userGuess);
   } else {
     if (userGuess > randomNumber) {
       document.querySelector("#results").innerHTML = "You Lose!";
+      gameEnded();
     } else if (userGuess < randomNumber) {
       document.querySelector("#results").innerHTML = "You Lose!";
+      gameEnded();
     } else {
       document.querySelector("#results").innerHTML = "You Win!";
+      gameEnded();
     }
   }
 

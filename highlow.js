@@ -4,9 +4,9 @@ var maxGuesses = 10;
 
 var gameEnded = () => {
   document.querySelector("#newGameBtn").style.display = 'inline';
-  document.querySelector("#easyBtn").style.display  = "none";
-  document.querySelector("#hardBtn").style.display  = "none";
-  document.querySelector("input").setAttribute("readonly","readonly");
+  document.querySelector("#easyBtn").style.display = "none";
+  document.querySelector("#hardBtn").style.display = "none";
+  document.querySelector("input").setAttribute("readonly", "readonly");
 }
 
 var newGame = () => {
@@ -50,19 +50,23 @@ var compareGuess = () => {
     } else if (userGuess < randomNumber) {
       document.querySelector("#results").innerHTML = "Your guess was too low!";
     } else {
-      document.querySelector("#results").innerHTML = "Your guess was correct!";
+      document.querySelector("#results").innerHTML = "Correct! It only took " + guesses.length + " attempts!";
+      document.querySelector("#container").style.background = "rgb(25,220,25)";
       gameEnded();
     }
     logGuess(userGuess);
   } else {
     if (userGuess > randomNumber) {
-      document.querySelector("#results").innerHTML = "You Lose!";
+      document.querySelector("#results").innerHTML = `You Lose! The number was ${randomNumber}`;
+      document.querySelector("#container").style.background = "rgb(220,25,25)";
       gameEnded();
     } else if (userGuess < randomNumber) {
-      document.querySelector("#results").innerHTML = "You Lose!";
+      document.querySelector("#results").innerHTML = `You Lose! The number was ${randomNumber}`;
+      document.querySelector("#container").style.background = "rgb(220,25,25)";
       gameEnded();
     } else {
-      document.querySelector("#results").innerHTML = "You Win!";
+      document.querySelector("#results").innerHTML = "You Won! It only took " + guesses.length + " attempts!";
+      document.querySelector("#container").style.background = "rgb(25,220,25)";
       gameEnded();
     }
   }
